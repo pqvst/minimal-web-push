@@ -13,6 +13,7 @@ app.set('view engine', 'pug');
 app.use(morgan('dev'));
 app.use(express.static('public'));
 
+// TODO: Generate VAPID keys (e.g. https://vapidkeys.com/)
 const vapid = {
   publicKey: '...',
   privateKey: '...',

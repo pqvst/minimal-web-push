@@ -40,7 +40,7 @@ const vapidPublicKey = VAPID_PUBLIC_KEY;
 
 async function initServiceWorker() {
   if ('serviceWorker' in navigator) {
-    swRegistration = await navigator.serviceWorker.register('sw.js');
+    const swRegistration = await navigator.serviceWorker.register('sw.js');
     const subscription = await swRegistration.pushManager.getSubscription();
     if (subscription) {
       console.log('User is already subscribed:', subscription);
